@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Sales Corporation - Trusted Electrical Components</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Electrical Sales</h1>
+                        <p>Corporation</p>
+                    </div>
+                </div>
+
+                <nav class="nav desktop-nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#industries" class="nav-link">Industries</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="cta-wrapper desktop-cta">
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-phone"></i>
+                        Get Quote
+                    </button>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <a href="#home" class="nav-link" onclick="closeMobileMenu()">Home</a>
+                    <a href="#products" class="nav-link" onclick="closeMobileMenu()">Products</a>
+                    <a href="#services" class="nav-link" onclick="closeMobileMenu()">Services</a>
+                    <a href="#industries" class="nav-link" onclick="closeMobileMenu()">Industries</a>
+                    <a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a>
+                    <a href="#testimonials" class="nav-link" onclick="closeMobileMenu()">Testimonials</a>
+                    <a href="#faq" class="nav-link" onclick="closeMobileMenu()">FAQ</a>
+                    <a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a>
+                    <button class="btn btn-primary mobile-cta" onclick="scrollToSection('contact')">
+                        <i class="fas fa-phone"></i>
+                        Get Quote
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            
+            <div class="animated-elements">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-icons">
+                        <div class="icon-container">
+                            <i class="fas fa-bolt icon-animated"></i>
+                            <i class="fas fa-shield-alt icon-animated"></i>
+                            <i class="fas fa-award icon-animated"></i>
+                        </div>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Electrical Sales Corporation</span>
+                    </h1>
+
+                    <p class="hero-subtitle">Your trusted partner for powering projects of all sizes</p>
+
+                    <p class="hero-description">
+                        Decades of experience in electrical components, serving engineers, contractors, builders, 
+                        retailers, industrial buyers, and electricians throughout India.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" onclick="scrollToSection('products')">
+                            Explore Products
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-outline btn-large" onclick="scrollToSection('contact')">
+                            Get Quote
+                        </button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-number blue">25+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number green">500+</div>
+                            <div class="stat-label">Product Range</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number amber">10,000+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Our Product Range</div>
+                    <h2 class="section-title">Top Electrical Products</h2>
+                    <p class="section-description">
+                        From MCBs to Bus Bar Chambers, Change-over Switches, and Panel Accessories, 
+                        our product lineup covers everything you need for any electrical installation.
+                    </p>
+                </div>
+
+                <div class="product-filters">
+                    <button class="filter-btn active" data-category="all">All Products</button>
+                    <button class="filter-btn" data-category="Circuit Protection">Circuit Protection</button>
+                    <button class="filter-btn" data-category="Power Management">Power Management</button>
+                    <button class="filter-btn" data-category="Distribution">Distribution</button>
+                    <button class="filter-btn" data-category="Safety">Safety</button>
+                    <button class="filter-btn" data-category="Accessories">Accessories</button>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+
+                <div class="additional-products">
+                    <h3>Other Products We Offer</h3>
+                    <div class="additional-grid" id="additionalGrid">
+                        <!-- Additional products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Our Services</div>
+                    <h2 class="section-title">Comprehensive Electrical Solutions</h2>
+                    <p class="section-description">
+                        Beyond providing quality products, we offer end-to-end services to ensure your electrical 
+                        projects are successful from planning to implementation and ongoing maintenance.
+                    </p>
+                </div>
+
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Services will be dynamically loaded here -->
+                </div>
+
+                <div class="services-cta">
+                    <h3>Need Custom Electrical Solutions?</h3>
+                    <p>Our expert team is ready to design and implement tailored electrical solutions 
+                       that meet your specific project requirements.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-outline-white" onclick="handleSupportContact('schedule')">Schedule Consultation</button>
+                        <button class="btn btn-white" onclick="scrollToSection('contact')">Request Quote</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Section -->
+        <section id="industries" class="industries">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge blue">Industries We Serve</div>
+                    <h2 class="section-title">Powering Diverse Industries</h2>
+                    <p class="section-description">
+                        Our electrical components and solutions serve a wide range of industries, 
+                        from manufacturing and commercial buildings to residential projects and infrastructure development.
+                    </p>
+                </div>
+
+                <div class="industries-grid" id="industriesGrid">
+                    <!-- Industries will be dynamically loaded here -->
+                </div>
+
+                <div class="industry-stats">
+                    <div class="stats-header">
+                        <h3>Our Industry Impact</h3>
+                        <p>Trusted by leading companies across various sectors</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">250+</div>
+                            <div class="stat-desc">Manufacturing Units</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">150+</div>
+                            <div class="stat-desc">Commercial Buildings</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">500+</div>
+                            <div class="stat-desc">Residential Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">75+</div>
+                            <div class="stat-desc">Infrastructure Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">About Electrical Sales Corporation</div>
+                    <h2 class="section-title">Trusted Name in Indian Electrical Industry</h2>
+                    <p class="section-description">
+                        We take pride in offering a comprehensive range of electrical products that power homes, 
+                        businesses, and infrastructure across the nation, backed by a legacy of quality and innovation.
+                    </p>
+                </div>
+
+                <div class="mission-vision">
+                    <div class="mission-card">
+                        <div class="card-icon blue">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To deliver safe, reliable, and innovative electrical solutions that empower progress and protect every connection — one product at a time.</p>
+                    </div>
+                    <div class="vision-card">
+                        <div class="card-icon green">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To become a household and industrial name in electrical components by delivering excellence in service that meets global standards and continuously adapting to the latest technological developments in the market.</p>
+                    </div>
+                </div>
+
+                <div class="facility-images">
+                    <div class="facility-item">
+                        <img src="https://images.pexels.com/photos/3525397/pexels-photo-3525397.jpeg" alt="Modern Electrical Facility">
+                        <div class="facility-overlay">
+                            <h4>State-of-the-Art Facility</h4>
+                            <p>Modern manufacturing equipment ensuring precision and quality</p>
+                        </div>
+                    </div>
+                    <div class="facility-item">
+                        <img src="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZmFjdG9yeXxlbnwwfHx8fDE3NTM5NjQ5ODF8MA&ixlib=rb-4.1.0&q=85" alt="Industrial Manufacturing">
+                        <div class="facility-overlay">
+                            <h4>Industrial Excellence</h4>
+                            <p>Decades of experience in electrical component manufacturing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="what-sets-apart">
+                    <h3>What Sets Us Apart</h3>
+                    <div class="apart-grid" id="apartGrid">
+                        <!-- Will be dynamically loaded -->
+                    </div>
+                </div>
+
+                <div class="why-choose-us">
+                    <h3>Why Choose Electrical Sales Corporation?</h3>
+                    <div class="choose-grid" id="chooseGrid">
+                        <!-- Will be dynamically loaded -->
+                    </div>
+                    <div class="choose-footer">
+                        <p>At Electrical Sales Corporation, we don't just sell electrical products — we provide peace of mind. 
+                           Our reputation is built on trust, customer satisfaction, and an unwavering commitment to excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge amber">Client Testimonials</div>
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-description">
+                        Don't just take our word for it. Here's what industry professionals 
+                        and businesses across India say about our electrical products and services.
+                    </p>
+                </div>
+
+                <div class="main-testimonial">
+                    <div class="testimonial-card" id="mainTestimonial">
+                        <!-- Will be dynamically loaded -->
+                    </div>
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="nav-btn prev" onclick="previousTestimonial()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="dots" id="testimonialDots">
+                        <!-- Dots will be dynamically loaded -->
+                    </div>
+                    <button class="nav-btn next" onclick="nextTestimonial()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge purple">Frequently Asked Questions</div>
+                    <h2 class="section-title">Got Questions? We've Got Answers</h2>
+                    <p class="section-description">
+                        Find answers to commonly asked questions about our products, services, 
+                        and policies. Can't find what you're looking for? We're here to help.
+                    </p>
+                </div>
+
+                <div class="faq-content">
+                    <div class="faq-main">
+                        <div class="faq-accordion" id="faqAccordion">
+                            <!-- FAQ items will be dynamically loaded -->
+                        </div>
+                    </div>
+
+                    <div class="faq-sidebar">
+                        <div class="certifications">
+                            <h3><span class="badge purple">Certifications</span></h3>
+                            <div class="certifications-list" id="certificationsList">
+                                <!-- Will be dynamically loaded -->
+                            </div>
+                        </div>
+
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Still Have Questions?</h3>
+                            <p>Our technical support team is ready to help you with any queries about our products or services.</p>
+                            <div class="support-buttons">
+                                <button class="btn btn-white" onclick="handleSupportContact('technical')">Contact Technical Support</button>
+                                <button class="btn btn-outline-white" onclick="handleSupportContact('schedule')">Schedule a Call</button>
+                            </div>
+                        </div>
+
+                        <div class="quick-contact">
+                            <h4>Quick Contact</h4>
+                            <div class="contact-item">
+                                <span class="label">Technical Support:</span>
+                                <p class="value">+91 98765 43210</p>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">Email:</span>
+                                <p class="value">support@electricalsalescorp.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <span class="label">Response Time:</span>
+                                <p class="value">Within 2 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Get In Touch</div>
+                    <h2 class="section-title">Contact Us Today</h2>
+                    <p class="section-description">
+                        Ready to power your next project? Get in touch with our experts for consultation, 
+                        quotes, and support. We're here to help you succeed.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-form-wrapper">
+                        <h3>Send us a Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Your Name *" required>
+                                <input type="email" name="email" placeholder="Email Address *" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" name="phone" placeholder="Phone Number">
+                                <input type="text" name="company" placeholder="Company Name">
+                            </div>
+                            <textarea name="message" placeholder="Tell us about your requirements *" rows="6" required></textarea>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                Send Message
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-intro">
+                            <h3>Get in Touch</h3>
+                            <p>Have questions about our electrical products or need expert consultation? 
+                               Our team is ready to help you find the perfect solution for your project.</p>
+                        </div>
+
+                        <div class="contact-details" id="contactDetails">
+                            <!-- Will be dynamically loaded -->
+                        </div>
+
+                        <div class="contact-cta">
+                            <h4>Ready to Power Your Project?</h4>
+                            <p>Join thousands of satisfied customers who trust us for their electrical needs.</p>
+                            <button class="btn btn-outline-white" onclick="handleViewCatalog()">View Product Catalog</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Electrical Sales</h3>
+                            <p>Corporation</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for powering projects of all sizes. Decades of experience 
+                        in electrical components, serving customers throughout India.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#products">MCBs & Circuit Breakers</a></li>
+                        <li><a href="#products">Change-over Switches</a></li>
+                        <li><a href="#products">Bus Bar Chambers</a></li>
+                        <li><a href="#products">Panel Accessories</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">Our Mission</a></li>
+                        <li><a href="#about">Quality Assurance</a></li>
+                        <li><a href="#about">Manufacturing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p class="contact-value">+91 98765 43210</p>
+                                <span class="contact-label">Call for immediate assistance</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p class="contact-value">info@electricalsalescorp.com</p>
+                                <span class="contact-label">Send us your queries</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p class="contact-value">Visit Our Facility</p>
+                                <span class="contact-label">123 Industrial Estate, Electronic City, Bangalore - 560100, Karnataka, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest updates on our products and electrical industry insights</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary" onclick="handleNewsletterSubscription()">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Electrical Sales Corporation. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <button class="btn btn-outline-small" onclick="scrollToTop()">
+                        <i class="fas fa-arrow-up"></i>
+                        Top
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <div class="toast-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast-message">
+                <strong>Success!</strong>
+                <p>Your message has been sent successfully.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
